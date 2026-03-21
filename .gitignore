@@ -1,0 +1,36 @@
+# =========================================================
+# .gitignore - Infraestrutura Tectonic/LaTeX
+# =========================================================
+
+# 1. Artefatos de Compilação (Output)
+# Ignora PDFs gerados apenas na raiz. 
+# PDFs vetorizados dentro de assets/logos/ serão versionados normalmente.
+/*.pdf
+
+# 2. Arquivos Temporários LaTeX / BibTeX
+# O Tectonic processa em memória, mas previne vazamentos caso a IDE use linting local.
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# 3. Cache e Configurações Locais de IDE (VS Code / Eclipse TeXlipse)
+.vscode/
+.project
+.settings/
+
+# 4. Artefatos de Sistema Operacional
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
