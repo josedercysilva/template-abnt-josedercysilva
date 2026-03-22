@@ -1,0 +1,38 @@
+% =========================================================
+% DEFINIÇÕES DE LAYOUT E TIPOGRAFIA
+% =========================================================
+
+% --- Geometria da Página (NBR 14724) ---
+\geometry{
+    top=3cm,
+    bottom=2cm,
+    left=3cm,
+    right=2cm
+}
+
+% --- Tipografia Base ---
+% Requisito ABNT: Arial ou Times New Roman (Renderização via SO nativo)
+\setmainfont{Arial}
+
+% --- Parametrização de Parágrafos ---
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.2cm}
+
+% --- Ambiente Semântico: Citação Direta Longa ---
+% NBR 10520: Exige recuo de 4cm, fonte menor, espaçamento simples e sem aspas.
+\newenvironment{citacao}{%
+   \begin{list}{}{%
+       \small
+       \leftmargin=4cm
+       \rightmargin=0cm
+       \setstretch{1.0}
+   }
+   \item\relax
+}{%
+   \end{list}
+}
+
+% --- Paginação ---
+% NBR 14724: Numeração no canto superior direito
+\pagestyle{myheadings}
