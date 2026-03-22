@@ -1,0 +1,30 @@
+% =========================================================
+% DEPENDÊNCIAS DE INFRAESTRUTURA
+% =========================================================
+
+% --- Motor Base (XeLaTeX) ---
+\usepackage{fontspec}           % Fontes nativas do SO (TTF/OTF)
+\usepackage[brazil]{babel}      % Regras de hifenização pt-BR
+\usepackage{csquotes}           % Dependência estrutural do biblatex
+
+% --- Tipografia e Geometria (NBR 14724) ---
+\usepackage[a4paper]{geometry}  % Motor de margens
+\usepackage{indentfirst}        % Recuo obrigatório no 1º parágrafo
+\usepackage{setspace}           % Motor de entrelinhas
+\usepackage{microtype}          % Otimização de justificação (kerning/tracking)
+
+% --- Elementos Gráficos ---
+\usepackage{graphicx}           % Renderização de assets visuais
+\usepackage{booktabs}           % Tabelas padrão IBGE (sem bordas verticais)
+\usepackage{caption}            % Hook para formatação de legendas
+
+% --- Motor Bibliográfico (NBR 6023) ---
+\usepackage[
+    backend=biber,
+    style=abnt,
+    backref=true
+]{biblatex}
+\addbibresource{bib/referencias.bib}
+
+% --- View ---
+\usepackage[colorlinks=true, allcolors=black]{hyperref} % Navegação interna do PDF
