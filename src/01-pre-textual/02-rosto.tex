@@ -1,0 +1,37 @@
+% =========================================================
+% VIEW: FOLHA DE ROSTO (NBR 14724)
+% =========================================================
+
+\begin{titlepage}
+    \centering
+
+    % --- 1. Autoria ---
+    {\large \textbf{\MakeUppercase{\autor}} \par}
+
+    \vfill
+
+    % --- 2. Título e Subtítulo ---
+    {\Large \textbf{\MakeUppercase{\titulo}} \par}
+    {\large \subtitulo \par}
+
+    \vspace{2cm} % Afastamento absoluto entre o título e a nota
+
+    % --- 3. Container da Natureza do Trabalho (Regra ABNT) ---
+    % Escopo isolado: Recuo de 50% da largura da área de texto (\textwidth).
+    \begin{flushright}
+        \begin{minipage}{0.5\textwidth}
+            \small % ABNT exige tipografia menor neste escopo
+            \naturezatrabalho \par
+            \vspace{0.5cm}
+            \textbf{Área de concentração:} \areaconcentracao \par
+            \textbf{Orientador:} \orientador \par
+        \end{minipage}
+    \end{flushright}
+
+    \vfill
+
+    % --- 4. Geolocalização (Rodapé) ---
+    {\large \textbf{\MakeUppercase{\local}} \par}
+    {\large \textbf{\ano} \par}
+
+\end{titlepage}

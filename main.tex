@@ -1,0 +1,38 @@
+% =========================================================
+% ENTRYPOINT - ARQUITETURA TIPOGRÁFICA ABNT (UFAM)
+% =========================================================
+
+% Classe base: 'report' permite a estruturação em Capítulos, 
+% ideal para relatórios técnicos extensos.
+\documentclass[12pt, a4paper, oneside]{report}
+
+% --- 1. Injeção de Dependências (Backend) ---
+\input{src/00-config/pacotes}
+\input{src/00-config/layout}
+\input{src/00-config/metadados}
+
+% --- 2. Renderização (Frontend) ---
+\begin{document}
+
+    % --- Elementos Pré-Textuais ---
+    % A view da capa consome as variáveis de estado definidas em metadados.tex
+    \input{src/01-pre-textual/01-capa}
+    \input{src/01-pre-textual/02-rosto}
+
+    % --- Sumário Automatizado ---
+    \newpage
+    \tableofcontents
+    \clearpage % Garante que o texto comece em uma nova página limpa
+
+% --- Elementos Textuais ---
+    % Ativa a numeração de páginas no canto superior direito (Regra ABNT)
+    \pagestyle{myheadings}
+
+    % Injeção dos Módulos de Conteúdo
+    \input{src/02-textual/01-introducao}
+    % \input{src/02-textual/02-desenvolvimento}
+
+    % --- Elementos Pós-Textuais ---
+    % (Futuras injeções: Referências, Apêndices virão aqui)
+
+\end{document}
