@@ -1,0 +1,36 @@
+% =========================================================
+% VIEW: CAPA (Renderização NBR 14724)
+% =========================================================
+% View imutável. Consome o estado de metadados.tex via macros.
+% Nenhuma string de dados deve ser colocada em hardcode neste ficheiro.
+
+\begin{titlepage}
+    \centering % Alinhamento global do eixo horizontal
+
+    % --- 1. Identidade Institucional ---
+    \includegraphics[width=3.5cm]{assets/logos/marca_ufam_vetor_positivo.pdf} \\
+    \vspace{1.5cm}
+
+    {\large \textbf{\MakeUppercase{\instituicao}} \par}
+    {\large \textbf{\MakeUppercase{\departamento}} \par}
+
+    \vfill % Mola de distribuição vertical (Top-Down)
+
+    % --- 2. Autoria ---
+    {\large \textbf{\MakeUppercase{\autor}} \par}
+
+    \vfill
+
+    % --- 3. Título e Subtítulo ---
+    {\Large \textbf{\MakeUppercase{\titulo}} \par}
+    {\large \subtitulo \par} % O subtítulo não herda caixa alta (Requisito estrito da ABNT)
+
+    \vfill
+    \vfill % Duplo vfill empurra a geolocalização estritamente para a margem inferior
+
+    % --- 4. Geolocalização (Rodapé) ---
+    % Tratamento de string (Uppercase) aplicado em runtime para conformidade normativa
+    {\large \textbf{\MakeUppercase{\local}} \par}
+    {\large \textbf{\ano} \par}
+
+\end{titlepage}
